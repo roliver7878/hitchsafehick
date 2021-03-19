@@ -17,7 +17,7 @@ from app.resources.create_account import CreateAccount
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://rafael_rotiroti:123456@127.0.0.1:5432/crud'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://docker:docker@127.0.0.1:5432/postgres'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     api = Api(app)
     CORS(app)
